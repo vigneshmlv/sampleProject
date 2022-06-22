@@ -80,8 +80,24 @@ class _LoginScreenState extends State<LoginScreen> {
                     onPressed: () {
                       print("Elevated button tapped");
                     },
-                    child: const Text("Login")),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.lock),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: const Text("Login"),
+                        ),
+                      ],
+                    )),
               ),
+              Image.asset(
+                "assets/profile_pic.jpeg",
+                width: 200,
+                height: 170,
+              ),
+              Image.network(
+                  "https://t3.ftcdn.net/jpg/01/76/97/96/360_F_176979696_hqfioFYq7pX13dmiu9ENrpsHZy1yM3Dt.jpg")
             ],
           ),
         ),
